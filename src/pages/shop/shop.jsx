@@ -1,15 +1,20 @@
-import React from 'react'
+import React from 'react';
+import { PRODUCTS } from "../../products";
+import { Product } from "./product";
+import "./shop.css";
+
 
 export const Shop = () => {
   return (
     <div className='shop'>
-        <div>
-            <h1>Marvin's Ecommerce Project</h1>
+        <div className='shopTitle'>
+            <h3>Bachata Store by Marvin Santos</h3>
         </div>
         <div className='products'>
-            <h1>Marvin's Ecommerce Project</h1>
+        {PRODUCTS.map((product) => (
+          <Product data={product} />
+        ))}
         </div>
-
     </div>
-  )
-}
+  );
+};
